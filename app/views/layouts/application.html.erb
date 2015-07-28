@@ -7,20 +7,15 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-
 		<div id="container" class="container-fluid">
 			<div class="row">
-				<div id="form-container" class="col-md-4 col-md-offset-4">
-					<div id="title-box" class="row">
-						<h2>Sistema de Cadastro de Dados</h2>
+				<div id="form-container" class="col-md-6 col-md-offset-3">
+					<div id="title-box">Sistema de Coleta de Dados</div>
+					<div id="form-restrainer">
+						<%= yield %>
 					</div>
-					
-					<%= yield %>
-					
 				</div>
 			</div>
-
 		</div>
-
 	</body>
 </html>
