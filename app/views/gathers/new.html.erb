@@ -1,0 +1,32 @@
+<div class="row">
+	<%= form_for @gather do |g| %>		
+		<%= g.label :ncf, "Nº da Nota de Contratação" %>
+	    <%= g.text_field :ncf, class: 'form-control' %>
+	    
+	    <%= g.label :agency_id, "Agência" %>
+	    <%= g.select(:agency_id, Agency.all.collect{|a| [a.name, a.id]}, {include_blank: true}, {:class => 'form-control'}) %>
+	    
+	    <%= g.label :coffin_id, "Modelo da Urna" %>
+	    <%= g.select(:coffin_id, Coffin.all.collect{|c| [c.name, c.id]}, {include_blank: true}, {:class => 'form-control'}) %>
+	    
+	    <%= g.label :deceased, "Nome do Falecido" %>
+	    <%= g.text_field :deceased, class: 'form-control' %>
+	    
+	    <%= g.label :placeofdeath_id, "Local de Falecimento" %>
+	    <%= g.select(:placeofdeath_id, Placeofdeath.all.collect{|p| [p.name, p.id]}, {include_blank: true}, {:class => 'form-control'}) %>
+	    
+	    <%= g.label :funeral_id, "Local de Velório" %>
+	    <%= g.select(:funeral_id, Funeral.all.collect{|f| [f.name, f.id]}, {include_blank: true}, {:class => 'form-control'}) %>
+	    
+	    <%= g.label :cemetery_id, "Local de Sepultamento/Cremação" %>
+	    <%= g.select(:cemetery_id, Cemetery.all.collect{|ce| [ce.name, ce.id]}, {include_blank: true}, {:class => 'form-control'}) %>
+	    
+	    <%= g.label :healthcare, "Convênio?" %>
+		<%= g.select :healthcare, ["Sim", "Não"]%>
+			
+			
+      <%= g.submit "Inserir Dados", class: "btn btn-primary" %>
+			
+	<% end %>
+		
+</div>
