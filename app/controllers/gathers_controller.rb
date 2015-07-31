@@ -20,7 +20,6 @@ class GathersController < ApplicationController
     if @gather.save
       redirect_to @gather
     else
-      @errors = @gather.errors.full_messages
       render 'new'
     end
   end
