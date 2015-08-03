@@ -1,4 +1,7 @@
 <div class="row">
+	<% if @gather.errors.any? %>
+		<h4 align="center" style="color: red">Preencha todos os campos</h4>
+	<% end %>
 	
 	<%= form_for @gather do |g| %>		
 		<%= g.label :ncf, "Nº da Nota de Contratação" %>
