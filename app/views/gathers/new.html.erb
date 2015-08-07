@@ -5,7 +5,7 @@
 	
 	<%= form_for @gather do |g| %>		
 		<%= g.label :ncf, "Nº da Nota de Contratação" %>
-		<% if !@gather.errors[:ncf].empty? %>			
+		<% if !@gather.errors[:ncf]? %>			
 			<%= g.text_field :ncf, class: 'form-control error' %>
 		<% else %>
 	    	<%= g.text_field :ncf, class: 'form-control' %>
