@@ -1,6 +1,12 @@
 class GathersController < ApplicationController 
   
-  def index    
+  def index 
+    @gather = Gather.all
+    @agency = Agency.all
+    @cemetery = Cemetery.all
+    @coffin = Coffin.all
+    @funeral = Funeral.all
+    @placeofdeath = Placeofdeath.all
   end
   
   def show 
