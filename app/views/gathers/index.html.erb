@@ -1,9 +1,10 @@
 <div id="form-container" class="col-md-10 col-md-offset-1">
-					<div id="title-box">Sistema de Coleta de Dados</div>
+					<div id="title-box">Bragi - Sistema de Coleta de Dados</div>
 <div class="row">
 	
 	<table>
   <tr>
+    <th>Horário da Criação</th>
     <th>Nº da Nota de Contratação </th>
     <th>Agência</th>
     <th>Modelo da Urna</th>
@@ -11,11 +12,12 @@
     <th>Local de Falecimento</th>
     <th>Local de Velório</th>
     <th>Local de Sepultamento/Cremação</th>
-    <th>Convênio?</th>
+    <th>Tem Convênio?</th>
   </tr>
  
   <% @gather.each do |g| %>
     <tr>
+      <td><%= g.created_at.to_s.chomp(' -0300') %></td>
       <td><%= g.ncf %></td>
       <td><%= g.agency.name %></td>
       <td><%= g.coffin.name %></td>
@@ -23,7 +25,7 @@
       <td><%= g.placeofdeath.name %></td>
       <td><%= g.funeral.name %></td>
       <td><%= g.cemetery.name %></td>
-      <td><%= g.healthcare %></td>
+      <td><%= g.namehc ? g.namehc : "Não" %></td>
   <% end %>
 </table>
 		

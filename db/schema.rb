@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727205845) do
+ActiveRecord::Schema.define(version: 20150831184010) do
 
   create_table "agencies", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 20150727205845) do
     t.string   "name"
   end
 
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "funerals", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,6 +53,8 @@ ActiveRecord::Schema.define(version: 20150727205845) do
     t.string   "ncf"
     t.string   "healthcare"
     t.string   "deceased"
+    t.string   "namehc"
+    t.string   "outside"
   end
 
   add_index "gathers", ["agency_id"], name: "index_gathers_on_agency_id"
