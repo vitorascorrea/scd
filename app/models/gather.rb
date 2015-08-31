@@ -1,9 +1,9 @@
 class Gather < ActiveRecord::Base
-  has_one :agency
-  has_one :cemetery
-  has_one :coffin
-  has_one :funeral
-  has_one :placeofdeath 
+  belongs_to :agency
+  belongs_to :cemetery
+  belongs_to :coffin
+  belongs_to :funeral
+  belongs_to :placeofdeath 
   
   validates :ncf, presence: true
   validates :agency_id, presence: true
