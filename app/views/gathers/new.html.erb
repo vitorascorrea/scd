@@ -20,6 +20,7 @@
 	    <%= g.select(:outside, ['Sim', 'Não'], {include_blank: true}, { :class => 'form-control' }) %>
 
 	    <div id="not_outside">
+	    
 		    <%= g.label :coffin_id, "Modelo da Urna" %>	    
 		    <%= g.select(:coffin_id, Coffin.all.collect{|c| [c.name, c.id]}, {include_blank: true}, {:class => 'form-control'}) %>	    	    
 		    	    
