@@ -20,12 +20,8 @@ $(document).on 'ready page:load', ->
 					$("#healthcare_company").show()
 					$('#healthcare_company').html(form)
 				else
-					$('#healthcare_company').empty			
+					$('#healthcare_company').empty
 					$('#healthcare_company').hide()
 		else
-			$('#not_outside').empty			
+			$('#not_outside').empty
 			$('#not_outside').hide()
-		
-	
-
-	
