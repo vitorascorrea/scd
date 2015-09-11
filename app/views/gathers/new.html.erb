@@ -36,13 +36,12 @@
 		    	    
 		    <%= g.label :healthcare, "Convênio?" %>
 		    <%= g.select(:healthcare, ['Sim', 'Não'], {include_blank: true}, { :class => 'form-control' }) %>
-
-		    <div id="healthcare_company">
+			
+			<div id="healthcare_company">
 		    	<%= g.label :namehc, "Qual empresa que presta o convênio?" %>
 		    	<%= g.text_field :namehc, class: 'form-control' %>
-		    </div>
-	    </div>
-			
+		    </div>	    
+			</div>
       <%= g.submit "Inserir Dados >", class: "button" %>			
 	<% end %>
 		
