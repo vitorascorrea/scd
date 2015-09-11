@@ -2,17 +2,6 @@
 <div id="form-container" class="col-md-10 col-md-offset-1">
 	<div id="title-box">Bragi - Sistema de Coleta de Dados</div>
 	
-	<div class="row" style="padding: 40px;">
-		Selecione o intervalo de tempo:
-
-		<%= form_tag dashboard_path, :method => 'get' do %>
-			<%= select_tag :interval, options_for_select([ "Dia", "Mês", "Ano", "Tudo" ]), include_blank: true %>
-			<%= submit_tag 'Filtrar' %>
-		<%end%>
-
-	</div>
-	
-
 	<div class="row">
 		<div class="col-md-6">			
 			<%= image_tag("charts/barra_agencias.png", :alt => "Image missing") %>
