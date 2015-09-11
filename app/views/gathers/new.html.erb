@@ -22,6 +22,7 @@
 	    <%= g.select(:outside, ['Sim', 'Não'], {include_blank: true}, { :class => 'form-control' }) %>
 
 	    <div id="not_outside">
+	    
 		    <%= g.label :coffin_id, "Modelo da Urna" %>	    
 		    <%= g.select(:coffin_id, Coffin.all.collect{|c| [c.name, c.id]}, {include_blank: true}, {:class => 'form-control'}) %>	    	    
 		    	    
@@ -37,13 +38,12 @@
 		    	    
 		    <%= g.label :healthcare, "Convênio?" %>
 		    <%= g.select(:healthcare, ['Sim', 'Não'], {include_blank: true}, { :class => 'form-control' }) %>
-
-		    <div id="healthcare_company">
+			
+			<div id="healthcare_company">
 		    	<%= g.label :namehc, "Qual empresa que presta o convênio?" %>
 		    	<%= g.text_field :namehc, class: 'form-control' %>
-		    </div>
-	    </div>
-			
+		    </div>	    
+			</div>
       <%= g.submit "Inserir Dados >", class: "button" %>			
 	<% end %>
 		

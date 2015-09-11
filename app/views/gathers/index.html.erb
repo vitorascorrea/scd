@@ -20,12 +20,12 @@
       <td><%= g.created_at.to_s.chomp(' -0300') %></td>
       <td><%= g.ncf %></td>
       <td><%= g.agency.name %></td>
-      <td><%= g.coffin.name %></td>
+      <td><%= g.coffin.try(:name) %></td>
       <td><%= g.deceased %></td>
-      <td><%= g.placeofdeath.name %></td>
-      <td><%= g.funeral.name %></td>
-      <td><%= g.cemetery.name %></td>
-      <td><%= g.namehc ? g.namehc : "Não" %></td>
+      <td><%= g.placeofdeath.try(:name) %></td>
+      <td><%= g.funeral.try(:name) %></td>
+      <td><%= g.cemetery.try(:name) %></td>
+      <td><%= g.namehc unless g.healthcare == "Não" %></td>
   <% end %>
 </table>
 		
