@@ -21,7 +21,7 @@ class GathersController < ApplicationController
   end
   
   def create
-    @gather = Gather.new(params.require(:gather).permit(:ncf, :agency_id, :coffin_id, :deceased, :placeofdeath_id, :funeral_id, :cemetery_id, :healthcare))
+    @gather = Gather.new(params.require(:gather).permit(:ncf, :agency_id, :coffin_id, :deceased, :placeofdeath_id, :funeral_id, :cemetery_id, :healthcare, :outside))
     
     if @gather.save
       redirect_to @gather
